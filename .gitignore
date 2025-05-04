@@ -1,0 +1,12 @@
+# Ignorar configurações do VSCode
+.vscode/
+
+# Ignorar arquivos temporários do sistema
+*.log
+*.tmp
+*.swp
+
+# Ignorar arquivos binários compilados
+*.exe
+*.out
+*.o
