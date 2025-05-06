@@ -48,26 +48,31 @@ celula *cria_lista_exemplo() {
 
 int main() {
     // Lista SEM cabeça
-    celula *lista_sem = cria_lista_exemplo(); // Usa a função da Q2
+    celula *lista_sem = cria_lista_exemplo();
     printf("Sem cabeca: %d celulas\n", conta_sem_cabeca(lista_sem));
 
     // Lista COM cabeça
     celula *lista_com = cria_lista_com_cabeca();
-    // Adiciona elementos (exemplo)
+    
     celula *no1 = malloc(sizeof(celula));
-    no1->x = 10; no1->prox = NULL;
+    no1->x = 10; 
+    
     celula *no2 = malloc(sizeof(celula));
-    no2->x = 20; no2->prox = NULL;
+    no2->x = 20; 
+    no2->prox = NULL;  
+    
     lista_com->prox = no1;
+    no1->prox = no2;  
+    
     printf("Com cabeca: %d celulas\n", conta_com_cabeca(lista_com));
 
     // Libera a memória
-    free(lista_sem->prox->prox); // Libera nó3
-    free(lista_sem->prox);       // Libera nó2
-    free(lista_sem);             // Libera nó1
-    free(lista_com->prox);       // Libera nó1
-    free(lista_com);             // Libera cabeça
-
+    free(lista_sem->prox->prox);
+    free(lista_sem->prox);
+    free(lista_sem);
+    free(lista_com->prox->prox);  // Libera no2
+    free(lista_com->prox);        // Libera no1
+    free(lista_com);              // Libera cabeça
 
     return 0;
 }
