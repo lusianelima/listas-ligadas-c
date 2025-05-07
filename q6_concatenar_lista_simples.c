@@ -55,13 +55,13 @@ int main() {
     celula *lista1 = NULL;
     celula *lista2 = NULL;
 
-    // Preenchendo lista1 com 1, 2, 3
+    // Preenchendo lista1
     InserirFim(&lista1, 1);
     InserirFim(&lista1, 2);
     InserirFim(&lista1, 3);
 
-    // Preenchendo lista2 com 4, 5
-    InserirFim(&lista2, 4);
+    // Preenchendo lista2
+    InserirFim(&lista2, 8);
     InserirFim(&lista2, 5);
 
     printf("Lista 1 antes da concatenação:\n");

@@ -50,7 +50,6 @@ void ConcatenarDupla(celula **l1, celula *l2) {
         *l1 = l2;
         return;
     }
-
     // Vai até o final da primeira lista
     celula *fim = *l1;
     while (fim->prox != NULL)
@@ -66,12 +65,12 @@ int main() {
     celula *lista1 = NULL;
     celula *lista2 = NULL;
 
-    // Preenche a primeira lista com os valores 1, 2, 3
+    // Preenche a primeira lista
     InserirFim(&lista1, 1);
     InserirFim(&lista1, 2);
     InserirFim(&lista1, 3);
 
-    // Preenche a segunda lista com os valores 4, 5
+    // Preenche a segunda lista
     InserirFim(&lista2, 4);
     InserirFim(&lista2, 5);
 
